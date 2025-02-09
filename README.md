@@ -97,15 +97,13 @@ This project is a data-driven self-portrait that visualizes my listening habits 
 
     Complete Pie Chart View:
         A full screenshot of the pie chart with genre labels and images displayed.
-        ![image](https://github.com/user-attachments/assets/b84190b7-4fd0-4b47-9c45-a0ba246c5b44)
+![image](https://github.com/user-attachments/assets/b84190b7-4fd0-4b47-9c45-a0ba246c5b44)
 
 
     Dynamic Image Swapping:
         A different image for the same genres after a 1-second swap to highlight the dynamic effect.
-        ![image](https://github.com/user-attachments/assets/2d5790fb-a6eb-4f12-8354-5f5ce5da8f8a)
-        Potential Improvements
-
-   
+![image](https://github.com/user-attachments/assets/2d5790fb-a6eb-4f12-8354-5f5ce5da8f8a)
+        
 ### Potential Improvements 
     Animations: Add smooth animations for the pie chart slices and image transitions.
     User Input: Allow users to select different time intervals for image swapping.
