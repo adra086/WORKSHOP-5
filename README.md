@@ -33,15 +33,15 @@ This project is a data-driven self-portrait that visualizes my listening habits 
 
   The data is loaded using the loadTable() function in the preload() section:
 
-    ```javascript
+``` javascript
     table = loadTable('FINEARTS2.csv', 'csv', 'header');
-    ```
+```
 
 ### 2. Managing Genre Images
 
     Each genre is associated with multiple images stored in an images array. These images are loaded using loadImage():
 
-    ```javascript
+```javascript
     let images = {
       Podcasts: ['chapotraphouse.jpg', 'redscare.jpg', 'phil.jpg'],
       Ska: ['sublime.jpg', 'nodoubt.jpg', 'streetlightmanifesto.jpg'],
@@ -49,7 +49,7 @@ This project is a data-driven self-portrait that visualizes my listening habits 
       RnB: ['avantdalebowlingclub.jpg', 'mosdef.jpg', 'erykahbadu.jpg', 'andre3000.jpg'],
       // Other genres continue...
     };
-    ```
+```
 
 ### 3. Generating a Colorful Pie Chart
 
@@ -57,7 +57,7 @@ This project is a data-driven self-portrait that visualizes my listening habits 
 
     The pie slices are drawn using the arc() function:
 
-    ```javascript
+```javascript
     arc(centerX, centerY, radius * 2, radius * 2, startAngle, startAngle + angle, PIE);
 
     Each slice is assigned a unique color using randomly generated RGB values:
@@ -65,12 +65,14 @@ This project is a data-driven self-portrait that visualizes my listening habits 
     for (let i = 0; i < table.columns.length; i++) {
       colors.push(color(random(100, 255), random(100, 255), random(100, 255), 200));
     }
-    ```
+```
 
 ### 4. Implementing Dynamic Image Swapping
 
     Images associated with each genre are dynamically displayed next to their corresponding pie slice.
     The displayed image for each genre swaps every 2 seconds using a timer:
+
+```javascript
 
     if (millis() - lastImageSwapTime > imageSwapInterval) {
       for (let genre of genres) {
@@ -78,15 +80,16 @@ This project is a data-driven self-portrait that visualizes my listening habits 
       }
       lastImageSwapTime = millis();  // Reset the timer
     }
+```
 
 ### 5. Displaying Labels and Values
 
     Each pie slice is labeled with its corresponding genre and listening time:
 
    
-    ```javascript 
+```javascript 
     text(`${genre} (${genreSum})`, labelX, labelY);
-    ```
+```
 
     The labels and values are displayed outside the pie chart for better readability.
 
