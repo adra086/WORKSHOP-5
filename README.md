@@ -33,12 +33,15 @@ This project is a data-driven self-portrait that visualizes my listening habits 
 
   The data is loaded using the loadTable() function in the preload() section:
 
+    ```javascript
     table = loadTable('FINEARTS2.csv', 'csv', 'header');
+    ```
 
 ### 2. Managing Genre Images
 
     Each genre is associated with multiple images stored in an images array. These images are loaded using loadImage():
 
+    ```javascript
     let images = {
       Podcasts: ['chapotraphouse.jpg', 'redscare.jpg', 'phil.jpg'],
       Ska: ['sublime.jpg', 'nodoubt.jpg', 'streetlightmanifesto.jpg'],
@@ -46,6 +49,7 @@ This project is a data-driven self-portrait that visualizes my listening habits 
       RnB: ['avantdalebowlingclub.jpg', 'mosdef.jpg', 'erykahbadu.jpg', 'andre3000.jpg'],
       // Other genres continue...
     };
+    ```
 
 ### 3. Generating a Colorful Pie Chart
 
@@ -53,6 +57,7 @@ This project is a data-driven self-portrait that visualizes my listening habits 
 
     The pie slices are drawn using the arc() function:
 
+    ```javascript
     arc(centerX, centerY, radius * 2, radius * 2, startAngle, startAngle + angle, PIE);
 
     Each slice is assigned a unique color using randomly generated RGB values:
@@ -60,6 +65,7 @@ This project is a data-driven self-portrait that visualizes my listening habits 
     for (let i = 0; i < table.columns.length; i++) {
       colors.push(color(random(100, 255), random(100, 255), random(100, 255), 200));
     }
+    ```
 
 ### 4. Implementing Dynamic Image Swapping
 
@@ -77,7 +83,10 @@ This project is a data-driven self-portrait that visualizes my listening habits 
 
     Each pie slice is labeled with its corresponding genre and listening time:
 
+   
+    ```javascript 
     text(`${genre} (${genreSum})`, labelX, labelY);
+    ```
 
     The labels and values are displayed outside the pie chart for better readability.
 
